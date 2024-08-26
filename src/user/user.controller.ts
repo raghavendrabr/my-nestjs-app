@@ -8,6 +8,7 @@ export class UserController {
 
   @Post()
   create(@Body() createUserDto: Partial<User>): Promise<User> {
+    console.log('Creating new user:', user);
     return this.userService.create(createUserDto);
   }
 
